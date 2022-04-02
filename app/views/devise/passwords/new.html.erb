@@ -1,16 +1,17 @@
-<h2>Forgot your password?</h2>
+<h1>Find your account</h1>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= f.label :please_enter_your_email_to_search_for_your_account %><br>
+    <%= f.email_field :email, placeholder: "Email address", autofocus: true, required: true, autocomplete: "email" %>
+  </div><br>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+    <%= f.submit "Search", class: "btn btn-primary" %>
+    <%= link_to  "Cancel", new_user_session_path, class: "btn btn-secondary" %>
+  </div><br>
 <% end %>
 
 <%= render "devise/shared/links" %>
