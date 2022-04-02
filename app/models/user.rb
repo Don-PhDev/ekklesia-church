@@ -5,4 +5,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts
+
+  def username
+    if name.nil? || name == ""
+      email_to_name
+    else
+      name
+    end
+  end
+
+  private
+
+    def email_to_name
+      email.split("@").first.capitalize
+    end
 end
