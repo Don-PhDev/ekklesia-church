@@ -1,11 +1,10 @@
 <div class="post_content">
-  <%= link_to post_path(post), class: "text-decoration-none text-dark" do %>
-    <div id="<%= dom_id post %>">
-      <h2><%= post.title if current_page?(posts_path) %></h2>
+  <div id="<%= dom_id post %>">
+    <h2><%= post.title if current_page?(posts_path) %></h2>
 
-      <p><small><%= post.posted_time_passed %></small></p>
+    <p><small><%= post.posted_time_passed %></small></p>
 
-      <p><%= post.body %></p>
-    </div>
-  <% end %>
+
+    <p><%= post.body %></p>
+  </div>
 </div>
