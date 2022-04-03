@@ -1,12 +1,17 @@
-<h1>Posts</h1>
+<% if @posts.any? %>
+  <h1>Posts</h1>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+    <% end %>
     <p>
       <%= link_to "Show this post", post %>
     </p>
-  <% end %>
-</div>
-
-<%= link_to "New post", new_post_path %>
+  </div>
+<% else %>
+  <div class="d-flex justify-content-center align-items-center">
+    <span class="display-1">0 posts yet</span>
+    <%= link_to "New post", new_post_path, class: "btn btn-primary ms-5 mt-2" if current_user&.admin %>
+  </div>
+<% end %>
