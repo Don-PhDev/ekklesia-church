@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+span.hor-divider {
+  display: block;
+  width: 100%;
+  border-top: 1.8px solid #cccccc;
+  margin: 0.25rem 0 1.5rem;
+}

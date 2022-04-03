@@ -1,13 +1,14 @@
 <% if @posts.any? %>
-  <h1>Posts</h1>
+  <h1 class="display-1 text-center">Posts</h1>
+  <span class="hor-divider"></span>
 
   <div id="posts">
     <% @posts.each do |post| %>
       <%= render post %>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
     <% end %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
   </div>
 <% else %>
   <div class="d-flex justify-content-center align-items-center">
