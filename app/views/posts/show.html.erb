@@ -1,8 +1,10 @@
-<%= render @post %>
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <span class="d-inline-block display-4 font-monospace mb-3 fw-bold">Post</span>
+    <%= link_to "Edit Post", edit_post_path(@post), class: "btn btn-primary" if current_user&.admin? %>
+  </div>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+  <%= render @post %>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+  <%= link_to "Back to posts", posts_path, class: "btn btn-secondary" %>
 </div>
