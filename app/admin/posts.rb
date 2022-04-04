@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  config.sort_order = "updated_at_desc"
   permit_params :title, :content, :user_id
 
   index do
