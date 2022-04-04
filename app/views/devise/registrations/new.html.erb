@@ -1,28 +1,30 @@
-<h2>Sign up</h2>
+<div class="container my-3">
+  <h4 class="display-4 font-monospace fw-bold my-4">Sign Up</h4>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email_address %><br>
-    <%= f.email_field :email, placeholder: "example@gmail.com", autofocus: true, autocomplete: "email" %>
-    <div class="form-text">You can use letters, numbers & periods</div>
-  </div><br>
+    <div class="field mb-2">
+      <%= f.label :email_address, class: "mb-2 fw-bold" %><br>
+      <%= f.email_field :email, placeholder: "example@gmail.com", autofocus: true, autocomplete: "email" %>
+      <div class="form-text">You can use letters, numbers & periods</div>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password, placeholder: "password", autocomplete: "new-password" %>
-    <div class="form-text">Use atleast 8 or more characters with a mix of letters, numbers & symbols</div>
-  </div><br>
+    <div class="field mb-2">
+      <%= f.label :password, class: "mb-2 fw-bold" %><br>
+      <%= f.password_field :password, placeholder: "password", autocomplete: "new-password" %>
+      <div class="form-text">Use atleast 8 or more characters with a mix of letters, numbers & symbols</div>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, placeholder: "password", autocomplete: "new-password" %>
-  </div><br>
+    <div class="field mb-2">
+      <%= f.label :password_confirmation, class: "mb-2 fw-bold" %><br>
+      <%= f.password_field :password_confirmation, placeholder: "password", autocomplete: "new-password" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up", class:"btn btn-success" %>
-  </div><br>
-<% end %>
+    <div class="actions mt-3 mb-2">
+      <%= f.submit "Sign up", class:"btn btn-success" %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>

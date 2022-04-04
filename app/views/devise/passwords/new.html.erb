@@ -1,17 +1,19 @@
-<h1>Find your account</h1>
+<div class="container my-3">
+  <h4 class="display-4 font-monospace fw-bold my-4">Find your account</h4>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :please_enter_your_email_to_search_for_your_account %><br>
-    <%= f.email_field :email, placeholder: "Email address", autofocus: true, required: true, autocomplete: "email" %>
-  </div><br>
+    <div class="field mb-2">
+      <%= f.label :please_enter_your_email_to_search_for_your_account, class: "mb-2" %><br>
+      <%= f.email_field :email, placeholder: "Email address", autofocus: true, required: true, autocomplete: "email" %>
+    </div><br>
 
-  <div class="actions">
-    <%= f.submit "Search", class: "btn btn-primary" %>
-    <%= link_to  "Cancel", new_user_session_path, class: "btn btn-secondary" %>
-  </div><br>
-<% end %>
+    <div class="actions">
+      <%= f.submit "Search", class: "btn btn-primary" %>
+      <%= link_to  "Cancel", new_user_session_path, class: "btn btn-secondary" %>
+    </div><br>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>
