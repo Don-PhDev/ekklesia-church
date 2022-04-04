@@ -1,20 +1,22 @@
-<% if @posts.any? %>
-  <div class="d-flex justify-content-between align-items-center my-3">
-    <h1 class="display-1 text-center font-monospace fw-bold">Posts</h1>
-    <%= link_to "New post", new_post_path, class: "btn btn-primary" if current_user&.admin %>
-  </div>
-  <span class="hor-divider"></span>
+<div class="container">
+  <% if @posts.any? %>
+    <div class="d-flex justify-content-between align-items-center my-3">
+      <h1 class="display-1 text-center font-monospace fw-bold">Posts</h1>
+      <%= link_to "New post", new_post_path, class: "btn btn-primary" if current_user&.admin %>
+    </div>
+    <span class="hor-divider"></span>
 
-  <div id="posts">
-    <% @posts.each do |post| %>
-      <%= link_to post_path(post), class: "text-decoration-none text-dark" do %>
-        <%= render post %>
+    <div id="posts">
+      <% @posts.each do |post| %>
+        <%= link_to post_path(post), class: "text-decoration-none text-dark" do %>
+          <%= render post %>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-<% else %>
-  <div class="d-flex justify-content-center align-items-center">
-    <h1 class="display-1">0 posts yet</h1>
-    <%= link_to "New post", new_post_path, class: "btn btn-primary ms-5 mt-2" if current_user&.admin %>
-  </div>
-<% end %>
+    </div>
+  <% else %>
+    <div class="d-flex justify-content-center align-items-center">
+      <h1 class="display-1">0 posts yet</h1>
+      <%= link_to "New post", new_post_path, class: "btn btn-primary ms-5 mt-2" if current_user&.admin %>
+    </div>
+  <% end %>
+</div>
