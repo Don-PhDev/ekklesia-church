@@ -39,6 +39,9 @@ ActiveAdmin.register Post do
         collection: User.pluck(:email, :id),
         input_html: { disabled: f.object.persisted? }
       f.input :title
+      # f.input "content" do |p|
+      #   p
+      # end
       f.input :content, as: :quill_editor,
         input_html:
           { data:

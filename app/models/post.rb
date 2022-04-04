@@ -17,23 +17,23 @@ class Post < ApplicationRecord
     end
   end
 
-  def body_joined_text
-    return first_body if first_body == last_body
+  def content_joined_text
+    return first_content if first_content == last_content
 
-    [first_body, last_body].join(" ").squeeze(" ")
+    [first_content, last_content].join(" ").squeeze(" ")
   end
 
-  def first_body
-    body_text&.first&.squish
+  def first_content
+    content_text&.first&.squish
   end
 
-  def last_body
-    body_text&.last&.split("]")&.last&.squish
+  def last_content
+    content_text&.last&.split("]")&.last&.squish
   end
 
   private
 
-    def body_text
-      self.body&.to_plain_text&.squish&.split("[")
+    def content_text
+      self.content&.to_plain_text&.squish&.split("[")
     end
 end

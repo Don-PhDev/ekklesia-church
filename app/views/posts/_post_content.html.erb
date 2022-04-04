@@ -13,7 +13,8 @@
         </p>
 
         <p>
-          <%= truncate(post.body_joined_text, length: 800) %>
+          <%= post.content_joined_text %>
+          <%# <%= strip_tags(post.content.to_trix_html) %1> %>
         </p>
 
       <% else %>
