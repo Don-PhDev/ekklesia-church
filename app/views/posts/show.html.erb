@@ -4,15 +4,17 @@
       <%= @post.title %>
     </h1>
 
-    <div>
-      <%= link_to "Edit", edit_post_path(@post),
-        class: "btn btn-primary" if current_user&.admin?
-      %>
-      <%= link_to "Delete", @post, data: {
-          turbo_method: :delete,
-          turbo_confirm: "Are you sure?"
-        }, class: "btn btn-danger"
-      %>
+    <% if current_user&.admin? %>
+      <div>
+        <%= link_to "Edit", edit_post_path(@post),
+          class: "btn btn-primary"
+        %>
+        <%= link_to "Delete", @post, data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+          }, class: "btn btn-danger"
+        %>
+      <% end %>
     </div>
   </div>
 
