@@ -49,12 +49,12 @@ ActiveAdmin.register Post do
               { modules:
                 { toolbar:
                   [
-                    ["bold", "italic", "underline"],
+                    ["bold", "italic", "link"],
                     [
-                      { "list": "ordered" },
-                      { "list": "bullet" }
+                      { "list": "bullet" },
+                      { "list": "ordered" }
                     ],
-                    ["link", "image"]
+                    ["image"]
                   ]
                 },
                 placeholder: "Write some description here...",
