@@ -4,11 +4,13 @@ ActiveAdmin.register Post do
   index do
     selectable_column
     id_column
-    column "User" do |user|
-      user.user.email
+    column "User" do |p|
+      p.user.email
     end
     column :title
-    column :body
+    column "Body" do |p|
+      raw p.body
+    end
     actions
   end
 
@@ -17,11 +19,13 @@ ActiveAdmin.register Post do
       row "Id" do |p|
         p.id
       end
-      row "User" do |user|
-        user.user.email
+      row "User" do |p|
+        p.user.email
       end
       row :title
-      row :body
+      row "Body" do |p|
+        raw p.body
+      end
       row :created_at
       row :updated_at
     end
@@ -35,7 +39,26 @@ ActiveAdmin.register Post do
         collection: User.pluck(:email, :id),
         input_html: { disabled: f.object.persisted? }
       f.input :title
-      f.input :body
+      f.input :body, as: :quill_editor,
+        input_html:
+          { data:
+            { options:
+              { modules:
+                { toolbar:
+                  [
+                    ["bold", "italic", "underline"],
+                    [
+                      { "list": "ordered" },
+                      { "list": "bullet" }
+                    ],
+                    ["link", "image"]
+                  ]
+                },
+                placeholder: "Write some description here...",
+                theme: "snow"
+              }
+            }
+          }
     end
     f.actions
   end
