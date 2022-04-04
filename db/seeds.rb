@@ -32,7 +32,7 @@ def data_creator
     Post.create!(
       user: User.all.to_a.sample,
       title: Faker::Book.title,
-      body: Faker::Lorem.paragraphs.join(" ")
+      content: Faker::Lorem.paragraphs.join(" ")
     )
   end
 end

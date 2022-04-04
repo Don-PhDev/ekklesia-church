@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  permit_params :title, :body, :user_id
+  permit_params :title, :content, :user_id
 
   index do
     selectable_column
@@ -8,8 +8,8 @@ ActiveAdmin.register Post do
       p.user.email
     end
     column :title
-    column "Body" do |p|
-      raw p.body
+    column "Content" do |p|
+      raw p.content
     end
     actions
   end
@@ -23,8 +23,8 @@ ActiveAdmin.register Post do
         p.user.email
       end
       row :title
-      row "Body" do |p|
-        raw p.body
+      row "Content" do |p|
+        raw p.content
       end
       row :created_at
       row :updated_at
@@ -39,7 +39,7 @@ ActiveAdmin.register Post do
         collection: User.pluck(:email, :id),
         input_html: { disabled: f.object.persisted? }
       f.input :title
-      f.input :body, as: :quill_editor,
+      f.input :content, as: :quill_editor,
         input_html:
           { data:
             { options:

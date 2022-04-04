@@ -4,7 +4,21 @@
 
     <p><small><%= post.posted_time_passed %></small></p>
 
+    <p>
+      <% if controller.action_name != "show" %>
+        <p>
+          <% post.content.embeds.first(3).each do |img| %>
+            <%= image_tag img.blob, class: "post_image" %>
+          <% end %>
+        </p>
 
-    <p><%= post.body %></p>
+        <p>
+          <%= truncate(post.body_joined_text, length: 800) %>
+        </p>
+
+      <% else %>
+        <%= post.content %>
+      <% end %>
+    </p>
   </div>
 </div>
