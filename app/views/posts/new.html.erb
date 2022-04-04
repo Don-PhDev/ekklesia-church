@@ -1,9 +1,7 @@
-<div class="container">
-  <h1>New post</h1>
+<div class="container my-3">
+  <h3 class="display-3 text-center font-monospace fw-bold">New Post</h3>
 
-  <%= render "form", post: @post %>
-
-  <br>
-
-  <%= link_to "Back to posts", posts_path, class: "btn btn-secondary" %>
+  <div class="card shadow">
+    <%= render "form", post: @post %>
+  </div>
 </div>

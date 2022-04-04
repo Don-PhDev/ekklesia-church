@@ -38,3 +38,7 @@
 .trix-button--icon-strike {
   display: none;
 }
+
+trix-editor.customized-min-height {
+  min-height: 15em;
+}

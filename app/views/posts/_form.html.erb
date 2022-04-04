@@ -1,27 +1,35 @@
-<%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="card-body">
+  <%= form_with(model: post) do |form| %>
+    <% if post.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% post.errors.each do |error| %>
+            <li><%= error.full_message %></li5>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-4">
+      <%= form.label :title, class: "mb-2 fw-bold" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.label :content, class: "mb-2 fw-bold" %>
+      <%= form.rich_text_area :content, placeholder: "Write some description here...", class: "form-control customized-min-height" %>
+    </div>
+
+    <div>
+      <%= form.submit class: "btn btn-success" %>
+
+      <% if current_page?(new_post_path) %>
+        <%= link_to "Cancel", posts_path, class: "btn btn-secondary" %>
+      <% else %>
+        <%= link_to "Cancel", @post, class: "btn btn-secondary" %>
+      <% end %>
     </div>
   <% end %>
-
-  <div class="mb-4">
-    <%= form.label :title, class: "mb-2" %>
-    <%= form.text_field :title, class: "form-control" %>
-  </div>
-
-  <div class="mb-4">
-    <%= form.label :content, class: "mb-2" %>
-    <%= form.rich_text_area :content, size: "30x8", class: "form-control" %>
-  </div>
-
-  <div>
-    <%= form.submit class: "btn btn-success" %>
-  </div>
-<% end %>
+</div>
