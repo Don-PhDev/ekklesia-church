@@ -4,6 +4,12 @@ def data_deleter
 end
 
 def data_creator
+  AdminUser.create!(
+    email: "admin@gmail.com",
+    password: "password",
+    password_confirmation: "password"
+  ) if Rails.env.development?
+
   User.create(
     email: "don@gmail.com",
     password: "password",
