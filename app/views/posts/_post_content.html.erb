@@ -2,7 +2,12 @@
   <div id="<%= dom_id post %>">
     <h2><%= post.title if current_page?(posts_path) %></h2>
 
-    <p><small><%= post.posted_time_passed %></small></p>
+    <p>
+      <small>by</small>
+      <strong><%= post.user.username %></strong>
+      <span class="fw-light mx-1">—</span>
+      <small><%= post.updated_at.strftime("%a %b %d, %Y") %></small>
+    </p>
 
     <p>
       <% if controller.action_name != "show" %>
@@ -10,11 +15,11 @@
           <% post.content.embeds.first(3).each do |img| %>
             <%= image_tag img.blob, class: "post_image" %>
           <% end %>
-        </p>
 
-        <p>
-          <%= post.content_joined_text %>
-          <%# <%= strip_tags(post.content.to_trix_html) %1> %>
+          <p>
+            <%= post.content_joined_text %>
+            <%# <%= strip_tags(post.content.to_trix_html) %1> %>
+          </p>
         </p>
 
       <% else %>

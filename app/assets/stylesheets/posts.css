@@ -4,8 +4,17 @@
 }
 
 .post_image {
-  width: 25rem;
+  width: 33%;
+  /* min-width: 100%; */
+  /* max-width: 75%; */
   height: 25rem;
   margin-bottom: 0.25rem;
   object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .post_image {
+    width: 100%;
+    height: auto;
+  }
 }
