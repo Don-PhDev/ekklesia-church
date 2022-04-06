@@ -1,30 +1,21 @@
-<div class="post_content">
+<% if controller.action_name != "show" %>
   <div id="<%= dom_id post %>">
-    <h2><%= post.title if current_page?(posts_path) %></h2>
-
-    <p>
-      <small>by</small>
-      <strong><%= post.user.username %></strong>
-      <span class="fw-light mx-1">—</span>
-      <small><%= post.updated_at.strftime("%a %b %d, %Y") %></small>
-    </p>
-
-    <p>
-      <% if controller.action_name != "show" %>
-        <p>
-          <% post.content.embeds.first(3).each do |img| %>
-            <%= image_tag img.blob, class: "post_image" %>
-          <% end %>
-
-          <p>
-            <%= post.content_joined_text %>
-            <%# <%= strip_tags(post.content.to_trix_html) %1> %>
-          </p>
-        </p>
-
-      <% else %>
-        <%= post.content %>
+    <div class="card post_content mb-3">
+      <% post.content.embeds.first(1).each do |img| %>
+        <%= image_tag img.blob, class: "card-img-top post_featured_image" %>
       <% end %>
-    </p>
+      <div class="card-body">
+        <small class="text-muted"><%= post.updated_at.strftime("%a %b %d, %Y") %></small>
+        <h2 class="card-title"><%= post.title %></h2>
+        <p>
+          <small class="fw-light">by</small>
+          <strong><%= post.user.username %></strong>
+        </p>
+        <p class="card-text mb-3"><%= post.content_joined_text %></p>
+        <%= link_to "Read more", post_path(post), class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% else %>
+    <%= post.content %>
   </div>
-</div>
+<% end %>
