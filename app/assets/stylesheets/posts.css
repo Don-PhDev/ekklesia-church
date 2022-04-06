@@ -1,14 +1,16 @@
 .post_content {
   min-height: 32.8125rem;
-  max-width: 78.75rem;
 }
 
 .post_image {
   width: 33%;
-  /* min-width: 100%; */
-  /* max-width: 75%; */
   height: 25rem;
   margin-bottom: 0.25rem;
+  object-fit: cover;
+}
+
+.post_featured_image {
+  height: 35rem;
   object-fit: cover;
 }
 
