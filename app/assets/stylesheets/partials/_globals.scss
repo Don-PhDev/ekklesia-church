@@ -5,7 +5,7 @@ body {
 
 a {
 	color: $color_capri;
-	text-decoration: none;
+	text-decoration: none !important;
 	&:hover {
 		color: #37b3ed;
 		text-decoration: none;
