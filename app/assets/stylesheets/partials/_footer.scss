@@ -1,0 +1,20 @@
+#footer {
+	padding: 15px;
+	color: $color_17;
+	font-size: 14px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	z-index: 9999;
+	background: #040b14;
+	.copyright {
+		text-align: center;
+	}
+	.credits {
+		padding-top: 5px;
+		text-align: center;
+		font-size: 13px;
+		color: $color_18;
+	}
+}

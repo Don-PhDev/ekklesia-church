@@ -10,17 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
- *= stub "active_admin"
+ *= stub "active_admin/active_admin"
  */
 
+@import "compiled_partials";
 @import "bootstrap";
 @import "bootstrap-icons";
-
-span.hor-divider {
-  display: block;
-  width: 100%;
-  border-top: 1.8px solid #cccccc;
-  margin: 0.25rem 0 1.5rem;
-}
