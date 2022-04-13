@@ -7,7 +7,7 @@
 		box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 		i {
 			font-size: 20px;
-			color: $color_2;
+			color: $color_capri;
 			float: left;
 			width: 44px;
 			height: 44px;
@@ -23,13 +23,13 @@
 			font-size: 22px;
 			font-weight: 600;
 			margin-bottom: 5px;
-			color: $color_8;
+			color: $very_dark_blue;
 		}
 		p {
 			padding: 0 0 10px 60px;
 			margin-bottom: 20px;
 			font-size: 14px;
-			color: $color_7;
+			color: $dark_blue;
 		}
 		.email {
 			p {
@@ -38,7 +38,7 @@
 			&:hover {
 				i {
 					background: #149ddd;
-					color: $color_4;
+					color: $white;
 				}
 			}
 		}
@@ -48,7 +48,7 @@
 				font-size: 18px;
 				display: inline-block;
 				background: #333;
-				color: $color_4;
+				color: $white;
 				line-height: 1;
 				padding: 8px 0;
 				border-radius: 50%;
@@ -59,7 +59,7 @@
 				margin-right: 10px;
 				&:hover {
 					background: #149ddd;
-					color: $color_4;
+					color: $white;
 				}
 			}
 		}
@@ -67,7 +67,7 @@
 			&:hover {
 				i {
 					background: #149ddd;
-					color: $color_4;
+					color: $white;
 				}
 			}
 		}
@@ -75,7 +75,7 @@
 			&:hover {
 				i {
 					background: #149ddd;
-					color: $color_4;
+					color: $white;
 				}
 			}
 		}
@@ -91,14 +91,14 @@
 		}
 		.validate {
 			display: none;
-			color: $color_15;
+			color: red;
 			margin: 0 0 15px 0;
 			font-weight: 400;
 			font-size: 13px;
 		}
 		.error-message {
 			display: none;
-			color: $color_4;
+			color: $white;
 			background: #ed3c0d;
 			text-align: left;
 			padding: 15px;
@@ -113,7 +113,7 @@
 		}
 		.sent-message {
 			display: none;
-			color: $color_4;
+			color: $white;
 			background: #18d26e;
 			text-align: center;
 			padding: 15px;
@@ -132,7 +132,7 @@
 				height: 24px;
 				margin: 0 10px -6px 0;
 				border: 3px solid #18d26e;
-				border-top-color: $border-top-color_1;
+				border-top-color: #eee;
 				-webkit-animation: animate-loading 1s linear infinite;
 				animation: animate-loading 1s linear infinite;
 			}
@@ -156,7 +156,7 @@
 			background: #149ddd;
 			border: 0;
 			padding: 10px 24px;
-			color: $color_4;
+			color: $white;
 			transition: 0.4s;
 			border-radius: 4px;
 			&:hover {

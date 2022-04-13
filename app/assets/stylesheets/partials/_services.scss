@@ -5,7 +5,7 @@
 			.icon {
 				background: #fff;
 				i {
-					color: $color_2;
+					color: $color_capri;
 				}
 			}
 		}
@@ -22,7 +22,7 @@
 		transition: 0.5s;
 		border: 1px solid #149ddd;
 		i {
-			color: $color_4;
+			color: $white;
 			font-size: 24px;
 			line-height: 0;
 		}
@@ -33,9 +33,9 @@
 		margin-bottom: 15px;
 		font-size: 18px;
 		a {
-			color: $color_11;
+			color: #343a40;
 			&:hover {
-				color: $color_2;
+				color: $color_capri;
 			}
 		}
 	}

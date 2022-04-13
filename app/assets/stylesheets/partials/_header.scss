@@ -26,13 +26,13 @@
 			font-weight: 600;
 			-moz-text-align-last: center;
 			text-align-last: center;
-			font-family: $font-family_3;
+			font-family: "Poppins", sans-serif;
 
 			a {
-				color: $color_4;
+				color: $white;
 				text-decoration: none;
 				&:hover {
-					color: $color_4;
+					color: $white;
 					text-decoration: none;
 				}
 			}
@@ -43,7 +43,7 @@
 				font-size: 18px;
 				display: inline-block;
 				background: #212431;
-				color: $color_4;
+				color: $white;
 				line-height: 1;
 				padding: 8px 0;
 				margin-right: 4px;
@@ -55,7 +55,7 @@
 
 				&:hover {
 					background: #149ddd;
-					color: $color_4;
+					color: $white;
 					text-decoration: none;
 				}
 			}
@@ -79,7 +79,7 @@
 	a {
 		display: flex;
 		align-items: center;
-		color: $color_5;
+		color: $light_gray;
 		padding: 12px 15px;
 		margin-bottom: 8px;
 		transition: 0.3s;
@@ -87,7 +87,7 @@
 		&:focus {
 			display: flex;
 			align-items: center;
-			color: $color_5;
+			color: $light_gray;
 			padding: 12px 15px;
 			margin-bottom: 8px;
 			transition: 0.3s;
@@ -95,43 +95,43 @@
 			i {
 				font-size: 24px;
 				padding-right: 8px;
-				color: $color_6;
+				color: $brown;
 			}
 		}
 		i {
 			font-size: 24px;
 			padding-right: 8px;
-			color: $color_6;
+			color: $brown;
 		}
 		&:hover {
 			text-decoration: none;
-			color: $color_4;
+			color: $white;
 			i {
-				color: $color_2;
+				color: $color_capri;
 			}
 		}
 	}
 	.active {
 		text-decoration: none;
-		color: $color_4;
+		color: $white;
 		&:focus {
 			text-decoration: none;
-			color: $color_4;
+			color: $white;
 			i {
-				color: $color_2;
+				color: $color_capri;
 			}
 		}
 		i {
-			color: $color_2;
+			color: $color_capri;
 		}
 	}
 	li {
 		&:hover {
 			>a {
 				text-decoration: none;
-				color: $color_4;
+				color: $white;
 				i {
-					color: $color_2;
+					color: $color_capri;
 				}
 			}
 		}

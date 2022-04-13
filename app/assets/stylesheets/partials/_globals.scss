@@ -1,19 +1,19 @@
 body {
-	font-family: $font-family_1;
-	color: $color_1;
+	font-family: "Open Sans", sans-serif;
+	color: $light_black;
 }
 
 a {
-	color: $color_2;
+	color: $color_capri;
 	text-decoration: none;
 	&:hover {
-		color: $color_3;
+		color: #37b3ed;
 		text-decoration: none;
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font-family_2;
+	font-family: "Raleway", sans-serif;
 }
 
 #main {
@@ -35,13 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 
 	i {
 		font-size: 28px;
-		color: $color_4;
+		color: $white;
 		line-height: 0;
 	}
 
 	&:hover {
 		background: #2eafec;
-		color: $color_4;
+		color: $white;
 	}
 }
 
@@ -59,8 +59,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 24px;
 	transition: all 0.4s;
 	outline: none !important;
-	background-color: $background-color_1;
-	color: $color_4;
+	background-color: $background-color_capri;
+	color: $white;
 	width: 40px;
 	height: 40px;
 	display: inline-flex;
@@ -96,7 +96,7 @@ section {
 		margin-bottom: 20px;
 		padding-bottom: 20px;
 		position: relative;
-		color: $color_7;
+		color: $dark_blue;
 
 		&::after {
 			content: "";

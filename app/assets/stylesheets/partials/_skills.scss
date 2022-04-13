@@ -10,8 +10,8 @@
 			text-transform: uppercase;
 			display: block;
 			font-weight: 600;
-			font-family: $font-family_3;
-			color: $color_8;
+			font-family: "Poppins", sans-serif;
+			color: $very_dark_blue;
 			.val {
 				float: right;
 				font-style: normal;
@@ -26,6 +26,6 @@
 		width: 1px;
 		height: 10px;
 		transition: 0.9s;
-		background-color: $background-color_1;
+		background-color: $background-color_capri;
 	}
 }

@@ -18,18 +18,18 @@
 			font-weight: 600;
 			line-height: 1;
 			text-transform: uppercase;
-			color: $color_1;
+			color: $light_black;
 			margin-bottom: 5px;
 			transition: all 0.3s ease-in-out;
 			&:hover {
-				color: $color_2;
+				color: $color_capri;
 			}
 			&:last-child {
 				margin-right: 0;
 			}
 		}
 		li.filter-active {
-			color: $color_2;
+			color: $color_capri;
 		}
 	}
 	.portfolio-wrap {
@@ -60,7 +60,7 @@
 			display: flex;
 			justify-content: center;
 			a {
-				color: $color_4;
+				color: $white;
 				font-size: 28px;
 				text-align: center;
 				background: rgba(20, 157, 221, 0.75);
