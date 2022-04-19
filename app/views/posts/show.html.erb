@@ -17,16 +17,18 @@
       <% end %>
     </div>
   </div>
-  <p class="mb-5">
-    <span><span class="fw-light">—</span> <%= @post.user.username %></span>
-    <small class="text-muted ms-2"><%= @post.updated_at.strftime("%B %d, %Y") %></small>
-  </p>
+  <div class="container">
+    <p class="mb-5">
+      <span><span class="fw-light">—</span> <%= @post.user.username %></span>
+      <small class="text-muted ms-2"><%= @post.updated_at.strftime("%B %d, %Y") %></small>
+    </p>
 
-  <div class="card shadow mb-3">
-    <div class="card-body">
-      <%= render @post %>
+    <div class="card shadow mb-3">
+      <div class="card-body">
+        <%= render @post %>
+      </div>
+
+      <%= link_to "Back to posts", posts_path, class: "btn btn-secondary" %>
     </div>
-
-    <%= link_to "Back to posts", posts_path, class: "btn btn-secondary" %>
   </div>
 </div>
