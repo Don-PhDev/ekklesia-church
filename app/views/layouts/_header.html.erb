@@ -24,7 +24,10 @@
         %>
       </li>
       <li>
-        <a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
+        <%= link_to "<i class='bx bx-file-blank'></i> <span>Resume</span>".html_safe,
+          resume_path,
+          class: "nav-link scrollto"
+        %>
       </li>
       <li>
         <a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
