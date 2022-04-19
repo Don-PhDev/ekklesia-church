@@ -39,7 +39,10 @@
         %>
       </li>
       <li>
-        <a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a>
+        <%= link_to "<i class='bx bx-server'></i> <span>Services</span>".html_safe,
+          services_path,
+          class: "nav-link scrollto"
+        %>
       </li>
       <li>
         <a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a>
