@@ -8,11 +8,11 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get "/about", to: "pages#about"
-  get "/resume", to: "pages#resume"
+  get "/about",     to: "pages#about"
+  get "/resume",    to: "pages#resume"
   get "/portfolio", to: "pages#portfolio"
-  get "/services", to: "pages#services"
-  get "/contact", to: "pages#contact"
+  get "/services",  to: "pages#services"
+  get "/contact",   to: "pages#contact"
 
   root "pages#index"
 end
