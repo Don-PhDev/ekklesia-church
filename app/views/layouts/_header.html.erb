@@ -15,40 +15,34 @@
   <nav id="navbar" class="nav-menu navbar">
     <ul>
       <li>
-        <%= link_to "<i class='bx bx-home'></i> <span>Home</span>".html_safe,
-          root_path,
-          class: "nav-link scrollto"
-        %>
+        <%= active_link_to root_path do %>
+          <i class="bx bx-home"></i> <span>Home</span>
+        <% end %>
       </li>
       <li>
-        <%= link_to "<i class='bx bx-user'></i> <span>About</span>".html_safe,
-          about_path,
-          class: "nav-link scrollto"
-        %>
+        <%= active_link_to about_path do %>
+          <i class="bx bx-user"></i> <span>About</span>
+        <% end %>
       </li>
       <li>
-        <%= link_to "<i class='bx bx-file-blank'></i> <span>Resume</span>".html_safe,
-          resume_path,
-          class: "nav-link scrollto"
-        %>
+        <%= active_link_to resume_path do %>
+          <i class="bx bx-file-blank"></i> <span>Resume</span>
+        <% end %>
       </li>
       <li>
-        <%= link_to "<i class='bx bx-book-content'></i> <span>Portfolio</span>".html_safe,
-          portfolio_path,
-          class: "nav-link scrollto"
-        %>
+        <%= active_link_to portfolio_path do %>
+          <i class="bx bx-book-content"></i> <span>Portfolio</span>
+        <% end %>
       </li>
       <li>
-        <%= link_to "<i class='bx bx-server'></i> <span>Services</span>".html_safe,
-          services_path,
-          class: "nav-link scrollto"
-        %>
+        <%= active_link_to services_path do %>
+          <i class="bx bx-server"></i> <span>Services</span>
+        <% end %>
       </li>
       <li>
-        <%= link_to "<i class='bx bx-envelope'></i> <span>Contact</span>".html_safe,
-          services_path,
-          class: "nav-link scrollto"
-        %>
+        <%= active_link_to contact_path do %>
+          <i class="bx bx-envelope"></i> <span>Contact</span>
+        <% end %>
       </li>
     </ul>
   </nav>
