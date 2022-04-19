@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get "/about", to: "pages#about"
   get "/resume", to: "pages#resume"
+  get "/portfolio", to: "pages#portfolio"
 
   root "pages#index"
 end
