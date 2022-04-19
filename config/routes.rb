@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/resume", to: "pages#resume"
   get "/portfolio", to: "pages#portfolio"
   get "/services", to: "pages#services"
+  get "/contact", to: "pages#contact"
 
   root "pages#index"
 end
