@@ -20,27 +20,32 @@
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.original_url}#about" do %>
+        <%= active_link_to "#{request.base_url}#about" do %>
           <i class="bx bx-user"></i> <span>About</span>
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.original_url}#resume" do %>
+        <%= active_link_to posts_path do %>
+          <i class="bx bx-edit"></i> <span>Blogs</span>
+        <% end %>
+      </li>
+      <li>
+        <%= active_link_to "#{request.base_url}#resume" do %>
           <i class="bx bx-file-blank"></i> <span>Resume</span>
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.original_url}#portfolio" do %>
+        <%= active_link_to "#{request.base_url}#portfolio" do %>
           <i class="bx bx-book-content"></i> <span>Portfolio</span>
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.original_url}#services" do %>
+        <%= active_link_to "#{request.base_url}#services" do %>
           <i class="bx bx-server"></i> <span>Services</span>
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.original_url}#contact" do %>
+        <%= active_link_to "#{request.base_url}#contact" do %>
           <i class="bx bx-envelope"></i> <span>Contact</span>
         <% end %>
       </li>
