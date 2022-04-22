@@ -40,6 +40,7 @@ gem "devise"
 gem "activeadmin"
 gem "activeadmin_quill_editor"
 gem "activeadmin_addons"
+gem 'active_admin_theme'
 gem "pagy", "~> 5.10"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

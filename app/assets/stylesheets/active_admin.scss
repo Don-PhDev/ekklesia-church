@@ -1,4 +1,4 @@
-@import 'activeadmin_addons/all';
+@import "activeadmin_addons/all";
 // Sass variable overrides must be declared before loading up Active Admin's styles.
 //
 // To view the variables that Active Admin provides, take a look at
@@ -13,6 +13,7 @@
 @import "active_admin/base";
 @import "activeadmin/quill_editor/quill.snow";
 @import "activeadmin/quill_editor_input";
+@import "wigu/active_admin_theme";
 
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:
