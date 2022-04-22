@@ -20,7 +20,8 @@
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.base_url}#about" do %>
+        <%# <%= active_link_to "#{request.base_url}#about" do %1> %>
+        <%= active_link_to about_path do %>
           <i class="bx bx-user"></i> <span>About</span>
         <% end %>
       </li>
@@ -30,22 +31,26 @@
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.base_url}#resume" do %>
+        <%# <%= active_link_to "#{request.base_url}#resume" do %1> %>
+        <%= active_link_to resume_path do %>
           <i class="bx bx-file-blank"></i> <span>Resume</span>
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.base_url}#portfolio" do %>
+        <%# <%= active_link_to "#{request.base_url}#portfolio" do %1> %>
+        <%= active_link_to portfolio_path do %>
           <i class="bx bx-book-content"></i> <span>Portfolio</span>
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.base_url}#services" do %>
+        <%# <%= active_link_to "#{request.base_url}#services" do %1> %>
+        <%= active_link_to services_path do %>
           <i class="bx bx-server"></i> <span>Services</span>
         <% end %>
       </li>
       <li>
-        <%= active_link_to "#{request.base_url}#contact" do %>
+        <%# <%= active_link_to "#{request.base_url}#contact" do %1> %>
+        <%= active_link_to contact_path do %>
           <i class="bx bx-envelope"></i> <span>Contact</span>
         <% end %>
       </li>
