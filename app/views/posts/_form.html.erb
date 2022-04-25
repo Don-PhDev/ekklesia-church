@@ -25,11 +25,7 @@
     <div>
       <%= form.submit class: "btn btn-success" %>
 
-      <% if current_page?(new_post_path) %>
-        <%= link_to "Cancel", posts_path, class: "btn btn-secondary" %>
-      <% else %>
-        <%= link_to "Cancel", @post, class: "btn btn-secondary" %>
-      <% end %>
+      <%= link_to "Cancel", current_page?(@post) ? posts_path: @post, class: "btn btn-secondary" %>
     </div>
   <% end %>
 </div>
